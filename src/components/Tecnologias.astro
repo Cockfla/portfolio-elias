@@ -1,0 +1,98 @@
+---
+const lenguajes = ["JavaScript", "TypeScript", "Python", "Java", "C#", "PHP"];
+const habilidadesFront = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "React",
+  "Tailwind",
+  "Nextjs",
+  "ReactNative",
+  "Astro",
+  "Svelte",
+];
+const habilidadesBack = [
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "SQL",
+  "REST API",
+  "PostgreSQL",
+  "MySQL",
+  "Vercel",
+  "Netlify",
+  "Azure",
+  "Cloudflare",
+];
+const iconos = {
+  JavaScript: "/JavaScript.svg",
+  TypeScript: "/TypeScript.svg",
+  Python: "/Python.svg",
+  Java: "/Java.svg",
+  "C#": "/CSharp.svg",
+  PHP: "/PHP.svg",
+  HTML5: "/HTML5.svg",
+  CSS3: "/CSS3.svg",
+  React: "/React.svg",
+  Tailwind: "/Tailwind CSS.svg",
+  Nextjs: "/Nextjs.svg",
+  ReactNative: "/React.svg",
+  Astro: "/favicon.svg",
+  Svelte: "/Svelte.svg",
+  "Node.js": "/Nodejs.svg",
+  Express: "/Express.svg",
+  MongoDB: "/Mongodb.svg",
+  SQL: "/SQL.svg",
+  "REST API": "/REST API.svg",
+  PostgreSQL: "/PostgreSQL.svg",
+  MySQL: "/MySQL.svg",
+  Vercel: "/Vercel.svg",
+  Netlify: "/Netlify.svg",
+  Azure: "/Azure.svg",
+  Cloudflare: "/Cloudflare.svg",
+};
+---
+
+<div
+  class="mt-10 flex p-5 w-auto lg:w-1/2 sm:flex-row text-center items-start justify-center"
+>
+  <div class="bg-slate-400 p-4 rounded-3xl">
+    <h3 class="text-xl font-semibold p-4">Lenguajes</h3>
+    <ul class="list-disc font-extralight list-inside">
+      {
+        lenguajes.map((lenguaje) => (
+          <li class="flex items-center">
+            <img src={iconos[lenguaje]} alt={lenguaje} class=" w-6 h-6 mr-2" />
+            {lenguaje}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="bg-slate-500 p-4 ml-2 rounded-3xl">
+    <h3 class="text-xl font-semibold p-4">Frontend</h3>
+    <ul class="list-disc list-inside font-extralight">
+      {
+        habilidadesFront.map((habilidad) => (
+          <li class="flex items-center">
+            <img src={iconos[habilidad]} alt={habilidad} class="w-6 h-6 mr-2" />
+            {habilidad}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="bg-slate-700 p-4 rounded-3xl ml-2">
+    <h3 class="text-xl font-semibold p-4">Backend</h3>
+    <ul class="list-disc list-inside font-extralight">
+      {
+        habilidadesBack.map((habilidad) => (
+          <li class="flex items-center">
+            <img src={iconos[habilidad]} alt={habilidad} class="w-6 h-6 mr-2" />
+            {habilidad}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+---
+const proyectos = [
+  {
+    nombre: "Gente Comunicaciones",
+    descripcion:
+      "Desarrollo de un sitio web para Gente Comunicaciones, optimizando su presencia en línea.",
+    link: "https://www.gentecomunicaciones.cl",
+    screenshot: "/gentecomunicaciones.png",
+  },
+  {
+    nombre: "ConnecTo",
+    descripcion:
+      "Plataforma de ayuda para emprendedores, proporcionando recursos y herramientas para iniciar y hacer crecer sus negocios.",
+    link: "https://connecto-app.vercel.app/",
+    screenshot: "/connecto.png",
+  },
+  {
+    nombre: "Vania Web",
+    descripcion:
+      "Sitio web desarrollado para Vania, mejorando su presencia en línea y la experiencia del usuario.",
+    link: "https://vania-web.vercel.app/",
+    screenshot: "vania.png",
+  },
+];
+---
+
+<div class="mt-10 p-5 rounded-2xl bg-slate-700 w-full max-w-4xl mx-auto">
+  <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+    {
+      proyectos.map((proyecto) => (
+        <div class="flex flex-col items-center p-4 bg-slate-400 rounded-lg shadow-md">
+          <img
+            src={proyecto.screenshot}
+            alt={`Screenshot de ${proyecto.nombre}`}
+            class="w-full h-auto mb-4 rounded-md"
+          />
+          <h3 class="text-xl font-semibold mb-2">{proyecto.nombre}</h3>
+          <p class="text-gray-700 font-light text-center mb-4">
+            {proyecto.descripcion}
+          </p>
+          <a
+            href={proyecto.link}
+            class="text-blue-500 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visitar Proyecto
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</div>

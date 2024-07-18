@@ -1,0 +1,38 @@
+---
+const proyectos = [
+  {
+    nombre: "ConnecTo",
+    descripcion:
+      "Plataforma de ayuda para emprendedores, proporcionando recursos y herramientas para iniciar y hacer crecer sus negocios.",
+    icono: "/connecto-logo.png",
+  },
+  {
+    nombre: "Sitios web para empresas",
+    descripcion:
+      "He desarrollado varios sitios web para diferentes empresas, optimizando su presencia en línea y mejorando la experiencia del usuario.",
+    icono: "/web-development.svg",
+  },
+];
+---
+
+<div class="mt-10 p-5 rounded-2xl bg-slate-700 w-full max-w-4xl mx-auto">
+  <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+    {
+      proyectos.map((proyecto) => (
+        <div class="flex flex-col items-center p-4 bg-slate-500 rounded-lg shadow-md">
+          <img
+            src={proyecto.icono}
+            alt={proyecto.nombre}
+            class="w-20 h-20 mb-4"
+          />
+          <h3 class="text-xl text-white font-semibold mb-2">
+            {proyecto.nombre}
+          </h3>
+          <p class="text-white font-extralight text-center">
+            {proyecto.descripcion}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>

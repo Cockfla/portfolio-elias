@@ -1,0 +1,67 @@
+---
+const contactInfo = {
+  email: "eliasbahacon10@gmail.com",
+  phone: "+56 9 7512 2121",
+  socialLinks: [
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/elias-bahamondes-80b1b7278/",
+      icon: "/linkedin.svg", // Cambia esto por la ruta correcta de tu icono
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/cockfla",
+      icon: "/github.svg", // Cambia esto por la ruta correcta de tu icono
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/cockfla/",
+      icon: "/instagram.svg", // Cambia esto por la ruta correcta de tu icono
+    },
+  ],
+};
+---
+
+<div
+  class="mt-10 p-6 rounded-2xl bg-slate-400 w-auto max-w-4xl mx-auto text-white shadow-lg"
+>
+  <div class="space-y-6">
+    <div
+      class="flex flex-col items-center sm:justify-between border-b border-white pb-4"
+    >
+      <span class="text-lg font-medium">Correo Electrónico:</span>
+      <a
+        href={`mailto:${contactInfo.email}`}
+        class="text-blue-200 hover:text-white transition duration-200"
+        >{contactInfo.email}</a
+      >
+    </div>
+    <div
+      class="flex flex-col items-center sm:justify-between border-b border-white pb-4"
+    >
+      <span class="text-lg font-medium">Teléfono:</span>
+      <a
+        href={`tel:${contactInfo.phone}`}
+        class="text-blue-200 hover:text-white transition duration-200"
+        >{contactInfo.phone}</a
+      >
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <div class="flex justify-center space-x-6">
+      {
+        contactInfo.socialLinks.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:scale-110 transition-transform duration-200"
+          >
+            <img src={link.icon} alt={link.name} class="w-10 h-10" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>

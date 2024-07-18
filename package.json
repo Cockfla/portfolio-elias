@@ -10,6 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.11.5"
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/rubik": "^5.0.22",
+    "@fontsource/onest": "^5.0.4",
+    "astro": "^4.11.5",
+    "tailwindcss": "^3.4.4"
   }
 }
